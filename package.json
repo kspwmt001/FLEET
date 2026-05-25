@@ -1,7 +1,7 @@
 {
   "name": "police-wireless-leave-system",
   "version": "0.1.0",
-  "description": "Police Wireless Leave System desktop app with KGID OTP login and officer workflow",
+  "description": "Police Wireless Leave System",
   "main": "main.js",
   "scripts": {
     "start": "electron . --disable-gpu",
@@ -14,7 +14,14 @@
   },
   "build": {
     "appId": "com.example.policewireless",
+    "asar": false,
     "files": ["**/*"],
+    "extraFiles": [
+      {
+        "from": "node_modules/electron/dist/ffmpeg.dll",
+        "to": "ffmpeg.dll"
+      }
+    ],
     "directories": { "buildResources": "build" },
     "win": { "target": ["portable"] }
   },
