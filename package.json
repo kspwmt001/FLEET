@@ -1,0 +1,23 @@
+{
+  "name": "police-wireless-leave-system",
+  "version": "0.1.0",
+  "description": "Police Wireless Leave System desktop app with KGID OTP login and officer workflow",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron . --disable-gpu",
+    "dev": "electron . --disable-gpu",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^26.0.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.example.policewireless",
+    "files": ["**/*"],
+    "directories": { "buildResources": "build" },
+    "win": { "target": ["portable"] }
+  },
+  "author": "",
+  "license": "MIT"
+}

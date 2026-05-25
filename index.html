@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Police Wireless Leave System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+
+    <!-- TOP BAR -->
+    <header class="topbar">
+      <div class="topbar-brand">
+        <div class="topbar-logo">
+          <div class="logo-icon">📡</div>
+          <div>
+            <p class="eyebrow">Government of Karnataka</p>
+            <h1>Police Wireless Leave System</h1>
+          </div>
+        </div>
+      </div>
+      <div class="topbar-right">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          Local Database Active
+        </div>
+        <div class="topbar-meta">KCSR Compliant · Secure · OTP Verified</div>
+      </div>
+    </header>
+
+    <main>
+      <!-- =================== LOGIN SCREEN =================== -->
+      <section id="login-screen" class="login-screen">
+
+        <div class="login-bg-deco">
+          <div class="deco-circle deco-1"></div>
+          <div class="deco-circle deco-2"></div>
+          <div class="deco-circle deco-3"></div>
+        </div>
+
+        <div class="login-card">
+          <div class="login-brand">
+            <div class="login-logo-wrap">
+              <span class="login-logo-icon">🛡️</span>
+            </div>
+            <p class="eyebrow">Secure Officer Portal</p>
+            <h2>Karnataka Police Wireless</h2>
+            <p class="login-desc">Role-based OTP login. Select your role and employee record to generate a demo OTP for verification.</p>
+          </div>
+
+          <!-- Step 1: Role Selection -->
+          <div class="login-step">
+            <div class="step-badge">Step 1</div>
+            <div class="form-row">
+              <label for="role">Select Login Role</label>
+              <select id="role">
+                <option value="" disabled selected>— Choose your role —</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Step 2: Employee Selection (role-filtered) -->
+          <div class="login-step">
+            <div class="step-badge">Step 2</div>
+            <div class="form-row" id="employee-select-row">
+              <label for="employee-select">Select Employee</label>
+              <select id="employee-select"><option value="" disabled selected>Select employee from HRMS</option></select>
+            </div>
+            <div class="form-row hidden" id="submitting-select-row">
+              <label for="submitting-select">Select Submitting Officer</label>
+              <select id="submitting-select"><option value="" disabled selected>Select Submitting Officer</option></select>
+            </div>
+            <div class="form-row hidden" id="granting-select-row">
+              <label for="granting-select">Select Granting Officer</label>
+              <select id="granting-select"><option value="" disabled selected>Select Granting Officer</option></select>
+            </div>
+            <div class="form-row hidden" id="approving-select-row">
+              <label for="approving-select">Select Approving Officer</label>
+              <select id="approving-select"><option value="" disabled selected>Select Approving Officer</option></select>
+            </div>
+          </div>
+
+          <!-- Step 3: Credentials -->
+          <div class="login-step">
+            <div class="step-badge">Step 3</div>
+            <div class="form-grid two">
+              <div class="form-row">
+                <label for="kgid">KGID Number</label>
+                <input id="kgid" type="text" placeholder="Auto-filled from selection" />
+              </div>
+              <div class="form-row">
+                <label for="mobile">Registered Mobile</label>
+                <input id="mobile" type="tel" placeholder="Auto-filled from HRMS" />
+              </div>
+            </div>
+            <button id="login-button" type="button" class="btn-primary btn-full">
+              <span>🔐</span> Send OTP
+            </button>
+          </div>
+
+          <!-- OTP Verification Box -->
+          <div id="otp-section" class="otp-box hidden">
+            <div class="otp-header">
+              <span class="otp-icon">📱</span>
+              <p class="otp-title">Demo OTP Sent</p>
+            </div>
+            <p id="otp-code" class="otp-code"></p>
+            <div class="form-row">
+              <label for="otp">Enter 6-Digit OTP</label>
+              <input id="otp" type="text" placeholder="Enter OTP from SMS" maxlength="6" />
+            </div>
+            <button id="verify-button" type="button" class="btn-success btn-full">
+              <span>✅</span> Verify & Login
+            </button>
+          </div>
+
+          <div id="message" class="message"></div>
+
+          <div class="login-footer">
+            <span>🔒 Encrypted · Role Restricted · HRMS Integrated</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================== DASHBOARD SCREEN =================== -->
+      <section id="dashboard-screen" class="hidden">
+
+        <!-- Dashboard Header -->
+        <div class="dashboard-header">
+          <div class="dh-left">
+            <div class="dh-avatar" id="dh-avatar-icon">👤</div>
+            <div>
+              <p class="eyebrow" id="user-role"></p>
+              <h2 id="dashboard-title"></h2>
+              <p class="dh-sub" id="dashboard-subtitle"></p>
+            </div>
+          </div>
+          <div class="dh-right">
+            <div class="dh-stats" id="dh-stats"></div>
+            <button id="logout-button" type="button" class="btn-logout">
+              <span>🚪</span> Logout
+            </button>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+
+          <!-- Sidebar Navigation -->
+          <nav class="dashboard-nav" aria-label="Navigation">
+            <div class="nav-section-label">Main Menu</div>
+            <button class="nav-item active" type="button" data-view="overview" data-icon="🏠">
+              <span class="nav-icon">🏠</span> Overview
+            </button>
+            <button class="nav-item" type="button" data-view="apply" data-icon="📋">
+              <span class="nav-icon">📋</span> Apply Leave
+            </button>
+            <button class="nav-item" type="button" data-view="track" data-icon="📍">
+              <span class="nav-icon">📍</span> Request Status
+            </button>
+            <button class="nav-item" type="button" data-view="inbox" data-icon="📥">
+              <span class="nav-icon">📥</span> Officer Inbox
+            </button>
+            <div class="nav-section-label" style="margin-top:8px;">Information</div>
+            <button class="nav-item" type="button" data-view="notifications" data-icon="🔔">
+              <span class="nav-icon">🔔</span> Notifications
+            </button>
+            <button class="nav-item" type="button" data-view="reports" data-icon="📊" style="display:none;">
+              <span class="nav-icon">📊</span> Leave Reports
+            </button>
+            <button class="nav-item" type="button" data-view="rules" data-icon="📚">
+              <span class="nav-icon">📚</span> KCSR Leave Types
+            </button>
+          </nav>
+
+          <!-- Main Content Panels -->
+          <section class="dashboard-content">
+
+            <!-- ===== OVERVIEW PANEL ===== -->
+            <div id="overview" class="panel active">
+              <div class="panel-header">
+                <h3>Employee Overview</h3>
+                <p>Your HRMS profile and service details from the Wireless database.</p>
+              </div>
+
+              <div class="summary-grid">
+                <article class="metric metric-blue">
+                  <span class="metric-icon">👤</span>
+                  <span class="metric-label">Full Name</span>
+                  <strong id="user-name">—</strong>
+                </article>
+                <article class="metric metric-orange">
+                  <span class="metric-icon">🎖️</span>
+                  <span class="metric-label">Rank / Grade</span>
+                  <strong id="user-rank">—</strong>
+                </article>
+                <article class="metric metric-green">
+                  <span class="metric-icon">🪪</span>
+                  <span class="metric-label">KGID Number</span>
+                  <strong id="user-kgid">—</strong>
+                </article>
+                <article class="metric metric-purple">
+                  <span class="metric-icon">📍</span>
+                  <span class="metric-label">Working Place</span>
+                  <strong id="user-place">—</strong>
+                </article>
+              </div>
+
+              <div class="detail-band">
+                <div class="detail-item">
+                  <span class="label">Designation</span>
+                  <strong id="user-designation">—</strong>
+                </div>
+                <div class="detail-item">
+                  <span class="label">District / Unit</span>
+                  <strong id="user-district">—</strong>
+                </div>
+                <div class="detail-item">
+                  <span class="label">Mobile Number</span>
+                  <strong id="user-mobile">—</strong>
+                </div>
+              </div>
+
+              <div class="workflow-banner">
+                <div class="wb-icon">📋</div>
+                <div>
+                  <strong>Leave Workflows</strong>
+                  <p><strong>Single-stage (CL / RH / General Holiday / Weekly Off):</strong> Submit → Submitting Officer sanctions directly.<br>
+                  <strong>Full workflow (EL, Medical, Maternity, Paternity etc.):</strong> Submit → Submitting Officer → Granting Officer → Approving Officer sanctions/rejects.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===== APPLY LEAVE PANEL ===== -->
+            <div id="apply" class="panel">
+              <div class="panel-header">
+                <div>
+                  <h3>Apply for Leave</h3>
+                  <p>Submit a leave request under KCSR rules with full routing to the officer chain.</p>
+                </div>
+                <span class="role-tag tag-employee">Employee Action</span>
+              </div>
+
+              <form id="apply-form" class="apply-form" onsubmit="return false;">
+
+                <!-- Leave Type & Days -->
+                <div class="form-section">
+                  <div class="form-section-title">📋 Leave Details</div>
+                  <div class="form-grid two">
+                    <div class="form-row">
+                      <label for="leave-type">Type of Leave (KCSR)</label>
+                      <select id="leave-type"></select>
+                    </div>
+                    <div class="form-row">
+                      <label for="leave-days">Number of Days</label>
+                      <input id="leave-days" type="number" min="1" readonly placeholder="Auto-calculated" class="readonly-field" />
+                    </div>
+                  </div>
+                  <div class="form-grid two">
+                    <div class="form-row">
+                      <label for="from-date">From Date</label>
+                      <input id="from-date" type="date" />
+                    </div>
+                    <div class="form-row">
+                      <label for="to-date">To Date</label>
+                      <input id="to-date" type="date" />
+                    </div>
+                  </div>
+                  <div id="days-preview" class="days-preview hidden">
+                    <span class="days-icon">📅</span>
+                    <span id="days-preview-text"></span>
+                  </div>
+                </div>
+
+                <!-- Officer Routing -->
+                <div class="form-section">
+                  <div class="form-section-title">🔀 Route this Leave File To</div>
+                  <div class="routing-info">
+                    Select the officer(s) who will process your leave application.
+                  </div>
+
+                  <!-- Single-stage info banner (shown for CL / RH / General Holiday / Weekly Off) -->
+                  <div id="single-stage-banner" class="hidden" style="background:var(--surface-green,#d1fae5);border:1px solid #86efac;border-radius:8px;padding:10px 14px;margin-bottom:12px;font-size:0.86rem;color:#065f46;">
+                    ⚡ <strong>Single-stage leave selected.</strong> Only a <strong>Submitting Officer</strong> is required — they will sanction directly without further routing.
+                  </div>
+
+                  <!-- Weekly Off note -->
+                  <div id="weekly-off-note" class="hidden" style="background:#fef3c7;border:1px solid #fde68a;border-radius:6px;padding:8px 12px;margin-bottom:12px;font-size:0.82rem;color:#92400e;">
+                    📅 <strong>Weekly Off</strong> is applicable to <strong>PC, HC, and ASI</strong> ranks as per duty roster. Ensure you are eligible before applying.
+                  </div>
+
+                  <div class="form-row">
+                    <label for="apply-submitting-officer">
+                      <span class="officer-dot dot-orange"></span> Submitting Officer
+                    </label>
+                    <select id="apply-submitting-officer"></select>
+                  </div>
+                  <div id="granting-officer-form-row" class="form-row">
+                    <label for="apply-granting-officer">
+                      <span class="officer-dot dot-blue"></span> Granting Officer
+                    </label>
+                    <select id="apply-granting-officer"></select>
+                  </div>
+                  <div id="approving-officer-form-row" class="form-row">
+                    <label for="apply-approving-officer">
+                      <span class="officer-dot dot-green"></span> Approving Officer
+                    </label>
+                    <select id="apply-approving-officer"></select>
+                  </div>
+
+                  <div id="routing-preview" class="routing-preview hidden">
+                    <span id="routing-preview-text"></span>
+                  </div>
+                </div>
+
+                <!-- Reason & Attachments -->
+                <div class="form-section">
+                  <div class="form-section-title">📝 Reason & Attachments</div>
+                  <div class="form-row">
+                    <label for="leave-reason">Reason / Remarks</label>
+                    <textarea id="leave-reason" placeholder="Describe the purpose or medical/personal reason for this leave..."></textarea>
+                  </div>
+                  <div class="form-row">
+                    <label for="attachments">Supporting Documents</label>
+                    <div class="file-upload-zone" id="file-upload-zone">
+                      <span class="file-upload-icon">📎</span>
+                      <span>Click or drop files here</span>
+                      <span class="file-hint">PDF · Word · Excel · Images · Text files accepted</span>
+                      <input id="attachments" type="file" multiple accept=".pdf,.jpg,.jpeg,.png,.doc,.docx,.xls,.xlsx,.txt" />
+                    </div>
+                    <div id="file-preview-list" class="file-preview-list"></div>
+                  </div>
+                </div>
+
+                <button id="submit-leave-button" type="button" class="btn-primary btn-full btn-large">
+                  <span>🚀</span> Submit Leave Request
+                </button>
+              </form>
+              <div id="apply-result" class="message"></div>
+            </div>
+
+            <!-- ===== TRACK / REQUEST STATUS PANEL ===== -->
+            <div id="track" class="panel">
+              <div class="panel-header">
+                <div>
+                  <h3>Request Status Tracker</h3>
+                  <p>Track every leave file — see exactly which officer's tray the file is sitting in right now.</p>
+                </div>
+                <span id="track-count" class="tag"></span>
+              </div>
+              <div id="track-list" class="request-list"></div>
+            </div>
+
+            <!-- ===== OFFICER INBOX PANEL ===== -->
+            <div id="inbox" class="panel">
+              <div class="panel-header">
+                <div>
+                  <h3>Officer Inbox</h3>
+                  <p>Files pending your decision. Add remarks, then forward, recommend, sanction, return, or reject.</p>
+                </div>
+                <span id="inbox-count" class="tag tag-orange"></span>
+              </div>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>File ID</th>
+                      <th>Applicant Details</th>
+                      <th>Leave Info</th>
+                      <th>Dates</th>
+                      <th>Status / Files</th>
+                      <th>Remarks & Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="inbox-table-body"></tbody>
+                </table>
+              </div>
+            </div>
+
+            <!-- ===== NOTIFICATIONS PANEL ===== -->
+            <div id="notifications" class="panel">
+              <div class="panel-header">
+                <h3>🔔 Notifications</h3>
+                <p>System alerts and leave file movement updates for your account.</p>
+              </div>
+              <div id="notification-list" class="notification-list"></div>
+            </div>
+
+            <!-- ===== REPORTS PANEL ===== -->
+            <div id="reports" class="panel">
+              <div class="panel-header">
+                <div>
+                  <h3>📊 Leave Reports</h3>
+                  <p>Monthly leave statistics — CL, EL, long-duration leaves, individual EL usage, and Paternity Leave service tracker.</p>
+                </div>
+              </div>
+
+              <!-- Filter Row -->
+              <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;flex-wrap:wrap;">
+                <label style="font-weight:600;font-size:0.88rem;">Filter by Month:</label>
+                <select id="report-month-sel" style="padding:6px 12px;border-radius:6px;border:1px solid var(--border);font-size:0.88rem;">
+                  <option value="0">January</option><option value="1">February</option>
+                  <option value="2">March</option><option value="3">April</option>
+                  <option value="4" selected>May</option><option value="5">June</option>
+                  <option value="6">July</option><option value="7">August</option>
+                  <option value="8">September</option><option value="9">October</option>
+                  <option value="10">November</option><option value="11">December</option>
+                </select>
+                <select id="report-year-sel" style="padding:6px 12px;border-radius:6px;border:1px solid var(--border);font-size:0.88rem;">
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026" selected>2026</option>
+                </select>
+              </div>
+
+              <div id="reports-content">
+                <div class="empty-state">
+                  <span class="empty-icon">📊</span>
+                  <strong>Loading reports…</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- ===== KCSR RULES PANEL ===== -->
+            <div id="rules" class="panel">
+              <div class="panel-header">
+                <h3>📚 KCSR Leave Types</h3>
+                <p>Leave categories governed by the Karnataka Civil Services Rules applicable to Police Wireless personnel.</p>
+              </div>
+              <div class="rules-grid">
+                <article class="rule-card rule-blue">
+                  <div class="rule-icon">🏖️</div>
+                  <strong>Casual Leave (CL)</strong>
+                  <span>Short-duration leave for personal exigencies. <strong>Single-stage</strong> sanction by Submitting Officer only.</span>
+                  <div class="rule-badge">Up to 15 days/year · Single-stage</div>
+                </article>
+                <article class="rule-card" style="background:var(--surface);border-left:4px solid #10b981;">
+                  <div class="rule-icon">🎌</div>
+                  <strong>Restricted Holiday (RH)</strong>
+                  <span>Two days per year chosen from the Govt. Restricted Holiday list. <strong>Single-stage</strong> sanction.</span>
+                  <div class="rule-badge" style="background:#d1fae5;color:#065f46;">2 days/year · Single-stage</div>
+                </article>
+                <article class="rule-card" style="background:var(--surface);border-left:4px solid #6366f1;">
+                  <div class="rule-icon">🏛️</div>
+                  <strong>General Holiday</strong>
+                  <span>National and State public holidays as per Govt. calendar. <strong>Single-stage</strong> sanction.</span>
+                  <div class="rule-badge" style="background:#ede9fe;color:#5b21b6;">As per Govt. calendar · Single-stage</div>
+                </article>
+                <article class="rule-card" style="background:var(--surface);border-left:4px solid #f59e0b;">
+                  <div class="rule-icon">📅</div>
+                  <strong>Weekly Off</strong>
+                  <span>Applicable to <strong>PC, HC, and ASI</strong> ranks as per duty roster. <strong>Single-stage</strong> sanction.</span>
+                  <div class="rule-badge" style="background:#fef3c7;color:#92400e;">PC / HC / ASI · Single-stage</div>
+                </article>
+                <article class="rule-card rule-green">
+                  <div class="rule-icon">🌿</div>
+                  <strong>Earned Leave (EL)</strong>
+                  <span>Leave earned proportionate to duty period, granted by competent authority on application.</span>
+                  <div class="rule-badge">1 day per 11 days duty</div>
+                </article>
+                <article class="rule-card rule-orange">
+                  <div class="rule-icon">💊</div>
+                  <strong>Half Pay Leave</strong>
+                  <span>Leave admissible under service rules, granted at half pay on medical or private grounds.</span>
+                  <div class="rule-badge">20 days/year</div>
+                </article>
+                <article class="rule-card rule-purple">
+                  <div class="rule-icon">🔄</div>
+                  <strong>Commuted Leave</strong>
+                  <span>Converted from half pay leave where admissible, requires medical certificate.</span>
+                  <div class="rule-badge">Up to 180 days</div>
+                </article>
+                <article class="rule-card rule-red">
+                  <div class="rule-icon">🏥</div>
+                  <strong>Medical Leave</strong>
+                  <span>Granted on production of medical certificate from authorised medical officer.</span>
+                  <div class="rule-badge">As per medical advice</div>
+                </article>
+                <article class="rule-card rule-teal">
+                  <div class="rule-icon">⭐</div>
+                  <strong>Special Casual Leave</strong>
+                  <span>For specific permitted duties/events — blood donation, sports, NCC activities, etc.</span>
+                  <div class="rule-badge">Specific occasions</div>
+                </article>
+                <article class="rule-card rule-pink">
+                  <div class="rule-icon">👶</div>
+                  <strong>Maternity Leave</strong>
+                  <span>Admissible to eligible women police personnel as per KCSR family provisions.</span>
+                  <div class="rule-badge">180 days</div>
+                </article>
+                <article class="rule-card rule-pink">
+                  <div class="rule-icon">👨‍👩‍👧</div>
+                  <strong>Paternity Leave</strong>
+                  <span>Admissible to male police personnel. <strong>Maximum 2 times in entire service career.</strong></span>
+                  <div class="rule-badge" style="background:#fee2e2;color:#991b1b;">15 days · Max 2 times / career</div>
+                </article>
+                <article class="rule-card rule-gray">
+                  <div class="rule-icon">📄</div>
+                  <strong>Extraordinary Leave</strong>
+                  <span>Leave without pay when no other leave is admissible or when the employee chooses it.</span>
+                  <div class="rule-badge">No pay granted</div>
+                </article>
+              </div>
+
+              <div class="workflow-banner" style="margin-top: 20px;">
+                <div class="wb-icon">🔀</div>
+                <div>
+                  <strong>Leave Workflows</strong>
+                  <p><strong>Single-stage (CL / RH / General Holiday / Weekly Off):</strong> Employee → Submitting Officer sanctions directly.<br>
+                  <strong>Full workflow (EL, Medical, Maternity, Paternity, etc.):</strong> Employee → Submitting Officer → Granting Officer → Approving Officer sanctions/rejects.</p>
+                </div>
+              </div>
+            </div>
+
+          </section>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

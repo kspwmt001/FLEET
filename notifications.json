@@ -1,0 +1,74 @@
+[
+  {
+    "text": "File PL-2026-210318: Leave Sanctioned by Approving Officer → Status: Leave sanctioned",
+    "kgid": "4005449",
+    "role": "Approving Officer",
+    "time": "25/05/2026, 11:06:04"
+  },
+  {
+    "text": "File PL-2026-210318: Recommended by Granting Officer → Status: Pending with Approving Officer",
+    "kgid": "4005449",
+    "role": "Granting Officer",
+    "time": "25/05/2026, 11:04:54"
+  },
+  {
+    "text": "File PL-2026-334508: Forwarded by Submitting Officer → Status: Pending with Granting Officer",
+    "kgid": "4005449",
+    "role": "Submitting Officer",
+    "time": "25/05/2026, 11:04:27"
+  },
+  {
+    "text": "File PL-2026-061637: Leave Sanctioned by Submitting Officer (Single-stage — Casual Leave) → Status: Leave sanctioned",
+    "kgid": "4005449",
+    "role": "Submitting Officer",
+    "time": "25/05/2026, 11:04:21"
+  },
+  {
+    "text": "File PL-2026-210318: Forwarded by Submitting Officer → Status: Pending with Granting Officer",
+    "kgid": "4005449",
+    "role": "Submitting Officer",
+    "time": "25/05/2026, 11:04:15"
+  },
+  {
+    "text": "PL-2026-210318 submitted. Pending with ERANNA M B.",
+    "kgid": "4005449",
+    "role": "Employee",
+    "time": "25/05/2026, 11:03:30"
+  },
+  {
+    "text": "PL-2026-061637 submitted. Pending with ERANNA M B.",
+    "kgid": "4005449",
+    "role": "Employee",
+    "time": "25/05/2026, 11:01:01"
+  },
+  {
+    "text": "PL-2026-334508 resubmitted and pending with ERANNA M B.",
+    "kgid": "4005449",
+    "role": "Employee",
+    "time": "22/05/2026, 13:06:10"
+  },
+  {
+    "text": "File PL-2026-434429: Forwarded by Submitting Officer → Status: Pending with Granting Officer",
+    "kgid": "1791638",
+    "role": "Submitting Officer",
+    "time": "22/05/2026, 12:51:26"
+  },
+  {
+    "text": "PL-2026-434429 submitted. Pending with MALLAPPA S SANGATI.",
+    "kgid": "1791638",
+    "role": "Employee",
+    "time": "22/05/2026, 12:50:34"
+  },
+  {
+    "text": "File PL-2026-334508: Returned to Employee by Submitting Officer → Status: Returned for correction",
+    "kgid": "4005449",
+    "role": "Submitting Officer",
+    "time": "22/05/2026, 12:05:32"
+  },
+  {
+    "text": "PL-2026-334508 submitted. Pending with ERANNA M B.",
+    "kgid": "4005449",
+    "role": "Employee",
+    "time": "22/05/2026, 11:58:54"
+  }
+]

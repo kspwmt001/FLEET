@@ -1,0 +1,297 @@
+[
+  {
+    "id": "PL-2026-210318",
+    "applicant": "SHEETAL SHIRAHATTI",
+    "kgid": "4005449",
+    "rank": "PSI",
+    "workingPlace": "District Not Available",
+    "type": "Earned Leave",
+    "fromDate": "2026-06-01",
+    "toDate": "2026-06-15",
+    "numberOfDays": 15,
+    "reason": "FOR PERSONAL WORK",
+    "singleStage": false,
+    "attachments": [],
+    "assignedSubmittingOfficerKgid": "2280953",
+    "assignedSubmittingOfficerName": "ERANNA M B",
+    "assignedSubmittingOfficerRank": "DSP/ACP",
+    "assignedGrantingOfficerKgid": "2280953",
+    "assignedGrantingOfficerName": "ERANNA M B",
+    "assignedGrantingOfficerRank": "DSP/ACP",
+    "assignedApprovingOfficerKgid": "201366",
+    "assignedApprovingOfficerName": "RYSHYANTH C B",
+    "assignedApprovingOfficerRank": "SP",
+    "status": "Leave sanctioned",
+    "stageKey": "final",
+    "currentHolder": "Closed (Sanctioned)",
+    "finalMessage": "✅ Your leave is sanctioned for the applying dates and number of days: 2026-06-01 to 2026-06-15 (15 day(s)). Sanctioned by RYSHYANTH C B.",
+    "createdAt": "25/05/2026, 11:03:30",
+    "history": [
+      {
+        "by": "SHEETAL SHIRAHATTI",
+        "role": "Employee",
+        "action": "Leave request submitted",
+        "note": "Applied for 15 day(s) from 2026-06-01 to 2026-06-15. Route: ERANNA M B → ERANNA M B → RYSHYANTH C B",
+        "time": "25/05/2026, 11:03:30"
+      },
+      {
+        "by": "ERANNA M B",
+        "role": "Submitting Officer",
+        "action": "Forwarded by Submitting Officer",
+        "note": "Approved and forwarded.",
+        "time": "25/05/2026, 11:04:15"
+      },
+      {
+        "by": "ERANNA M B",
+        "role": "Granting Officer",
+        "action": "Recommended by Granting Officer",
+        "note": "Approved and forwarded.",
+        "time": "25/05/2026, 11:04:54"
+      },
+      {
+        "by": "RYSHYANTH C B",
+        "role": "Approving Officer",
+        "action": "Leave Sanctioned by Approving Officer",
+        "note": "Approved and forwarded.",
+        "time": "25/05/2026, 11:06:04"
+      }
+    ]
+  },
+  {
+    "id": "PL-2026-061637",
+    "applicant": "SHEETAL SHIRAHATTI",
+    "kgid": "4005449",
+    "rank": "PSI",
+    "workingPlace": "District Not Available",
+    "type": "Casual Leave",
+    "fromDate": "2026-05-29",
+    "toDate": "2026-05-30",
+    "numberOfDays": 2,
+    "reason": "FOR PERSONEL WORK",
+    "singleStage": true,
+    "attachments": [],
+    "assignedSubmittingOfficerKgid": "2280953",
+    "assignedSubmittingOfficerName": "ERANNA M B",
+    "assignedSubmittingOfficerRank": "DSP/ACP",
+    "assignedGrantingOfficerKgid": null,
+    "assignedGrantingOfficerName": null,
+    "assignedGrantingOfficerRank": null,
+    "assignedApprovingOfficerKgid": null,
+    "assignedApprovingOfficerName": null,
+    "assignedApprovingOfficerRank": null,
+    "status": "Leave sanctioned",
+    "stageKey": "final",
+    "currentHolder": "Closed (Sanctioned)",
+    "finalMessage": "✅ Your Casual Leave is sanctioned for 2026-05-29 to 2026-05-30 (2 day(s)). Sanctioned by ERANNA M B.",
+    "createdAt": "25/05/2026, 11:01:01",
+    "history": [
+      {
+        "by": "SHEETAL SHIRAHATTI",
+        "role": "Employee",
+        "action": "Leave request submitted",
+        "note": "Applied for 2 day(s) from 2026-05-29 to 2026-05-30. Route: ERANNA M B (Single-stage sanction)",
+        "time": "25/05/2026, 11:01:01"
+      },
+      {
+        "by": "ERANNA M B",
+        "role": "Submitting Officer",
+        "action": "Leave Sanctioned by Submitting Officer (Single-stage — Casual Leave)",
+        "note": "Approved and forwarded.",
+        "time": "25/05/2026, 11:04:21"
+      }
+    ]
+  },
+  {
+    "id": "PL-2026-434429",
+    "applicant": "RAMA NAIK",
+    "kgid": "1791638",
+    "rank": "PSI",
+    "workingPlace": "Cts",
+    "type": "Casual Leave",
+    "fromDate": "2026-05-22",
+    "toDate": "2026-05-24",
+    "numberOfDays": 3,
+    "reason": "FAMILY FUNCTION",
+    "attachments": [
+      {
+        "name": "1779434434427_Screenshot 2026-05-20 125751.png",
+        "originalName": "Screenshot 2026-05-20 125751.png",
+        "size": 15057,
+        "path": "C:\\Users\\HP\\Downloads\\leave files\\uploads\\1779434434427_Screenshot 2026-05-20 125751.png"
+      }
+    ],
+    "assignedSubmittingOfficerKgid": "2821780",
+    "assignedSubmittingOfficerName": "MALLAPPA S SANGATI",
+    "assignedSubmittingOfficerRank": "PI",
+    "assignedGrantingOfficerKgid": "2283821",
+    "assignedGrantingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedGrantingOfficerRank": "DSP/ACP",
+    "assignedApprovingOfficerKgid": "201366",
+    "assignedApprovingOfficerName": "RYSHYANTH C B",
+    "assignedApprovingOfficerRank": "SP",
+    "status": "Pending with Granting Officer",
+    "stageKey": "granting",
+    "currentHolder": "Granting Officer: ENOCH VIVEK PRABHU",
+    "finalMessage": "",
+    "createdAt": "22/05/2026, 12:50:34",
+    "history": [
+      {
+        "by": "RAMA NAIK",
+        "role": "Employee",
+        "action": "Leave request submitted",
+        "note": "Applied for 3 day(s) from 2026-05-22 to 2026-05-24. Route: MALLAPPA S SANGATI → ENOCH VIVEK PRABHU → RYSHYANTH C B",
+        "time": "22/05/2026, 12:50:34"
+      },
+      {
+        "by": "MALLAPPA S SANGATI",
+        "role": "Submitting Officer",
+        "action": "Forwarded by Submitting Officer",
+        "note": "Approved and forwarded.",
+        "time": "22/05/2026, 12:51:26"
+      }
+    ]
+  },
+  {
+    "id": "PL-2026-334508",
+    "applicant": "SHEETAL SHIRAHATTI",
+    "kgid": "4005449",
+    "rank": "PSI",
+    "workingPlace": "District Not Available",
+    "type": "Earned Leave",
+    "fromDate": "2026-05-23",
+    "toDate": "2026-06-06",
+    "numberOfDays": 15,
+    "reason": "Encashment of EL",
+    "attachments": [
+      {
+        "name": "1779431334506_Screenshot 2025-10-09 155826.png",
+        "originalName": "Screenshot 2025-10-09 155826.png",
+        "size": 590966,
+        "path": "C:\\Users\\HP\\Downloads\\leave files\\uploads\\1779431334506_Screenshot 2025-10-09 155826.png"
+      }
+    ],
+    "assignedSubmittingOfficerKgid": "2280953",
+    "assignedSubmittingOfficerName": "ERANNA M B",
+    "assignedSubmittingOfficerRank": "DSP/ACP",
+    "assignedGrantingOfficerKgid": "201366",
+    "assignedGrantingOfficerName": "RYSHYANTH C B",
+    "assignedGrantingOfficerRank": "SP",
+    "assignedApprovingOfficerKgid": "201366",
+    "assignedApprovingOfficerName": "RYSHYANTH C B",
+    "assignedApprovingOfficerRank": "SP",
+    "status": "Pending with Granting Officer",
+    "stageKey": "granting",
+    "currentHolder": "Granting Officer: RYSHYANTH C B",
+    "finalMessage": "",
+    "createdAt": "22/05/2026, 11:58:54",
+    "history": [
+      {
+        "by": "SHEETAL SHIRAHATTI",
+        "role": "Employee",
+        "action": "Leave request submitted",
+        "note": "Applied for 15 day(s) from 2026-05-23 to 2026-06-06. Route: ERANNA M B → RYSHYANTH C B → RYSHYANTH C B",
+        "time": "22/05/2026, 11:58:54"
+      },
+      {
+        "by": "ERANNA M B",
+        "role": "Submitting Officer",
+        "action": "Returned to Employee by Submitting Officer",
+        "note": "Check any imp duties for the said period and reapply?",
+        "time": "22/05/2026, 12:05:32"
+      },
+      {
+        "by": "SHEETAL SHIRAHATTI",
+        "role": "Employee",
+        "action": "Resubmitted after correction",
+        "note": "Corrected and resubmitted: 15 day(s) from 2026-05-23 to 2026-06-06. Reason: Encashment of EL",
+        "time": "22/05/2026, 13:06:10"
+      },
+      {
+        "by": "ERANNA M B",
+        "role": "Submitting Officer",
+        "action": "Forwarded by Submitting Officer",
+        "note": "Approved and forwarded.",
+        "time": "25/05/2026, 11:04:27"
+      }
+    ]
+  },
+  {
+    "id": "PL-DEMO-001",
+    "applicant": "BHEEMASHANKAR",
+    "kgid": "2280944",
+    "rank": "PI",
+    "workingPlace": "District Not Available",
+    "type": "Casual Leave",
+    "fromDate": "2026-05-20",
+    "toDate": "2026-05-23",
+    "numberOfDays": 4,
+    "reason": "Urgent domestic repair work at native hometown. Requires personal presence.",
+    "attachments": [],
+    "assignedSubmittingOfficerKgid": "2283821",
+    "assignedSubmittingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedSubmittingOfficerRank": "DSP/ACP",
+    "assignedGrantingOfficerKgid": "2283821",
+    "assignedGrantingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedGrantingOfficerRank": "DSP/ACP",
+    "assignedApprovingOfficerKgid": "2283821",
+    "assignedApprovingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedApprovingOfficerRank": "DSP/ACP",
+    "status": "Pending with Submitting Officer",
+    "stageKey": "submitting",
+    "currentHolder": "Submitting Officer: ENOCH VIVEK PRABHU",
+    "finalMessage": "",
+    "createdAt": "22/05/2026, 11:34:15",
+    "history": [
+      {
+        "by": "BHEEMASHANKAR",
+        "role": "Employee",
+        "action": "Leave request submitted",
+        "note": "4 days Casual Leave. Route: ENOCH VIVEK PRABHU → ENOCH VIVEK PRABHU → ENOCH VIVEK PRABHU",
+        "time": "22/05/2026, 11:34:15"
+      }
+    ]
+  },
+  {
+    "id": "PL-DEMO-002",
+    "applicant": "CHOODAMANI N C",
+    "kgid": "2280951",
+    "rank": "PI",
+    "workingPlace": "Wireless HQ",
+    "type": "Medical Leave",
+    "fromDate": "2026-05-17",
+    "toDate": "2026-05-27",
+    "numberOfDays": 11,
+    "reason": "Medical rest advised by authorised physician due to severe viral fever.",
+    "attachments": [],
+    "assignedSubmittingOfficerKgid": "2283821",
+    "assignedSubmittingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedSubmittingOfficerRank": "DSP/ACP",
+    "assignedGrantingOfficerKgid": "2283821",
+    "assignedGrantingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedGrantingOfficerRank": "DSP/ACP",
+    "assignedApprovingOfficerKgid": "2283821",
+    "assignedApprovingOfficerName": "ENOCH VIVEK PRABHU",
+    "assignedApprovingOfficerRank": "DSP/ACP",
+    "status": "Pending with Granting Officer",
+    "stageKey": "granting",
+    "currentHolder": "Granting Officer: ENOCH VIVEK PRABHU",
+    "finalMessage": "",
+    "createdAt": "22/05/2026, 11:34:15",
+    "history": [
+      {
+        "by": "CHOODAMANI N C",
+        "role": "Employee",
+        "action": "Leave request submitted",
+        "note": "11 days Medical Leave.",
+        "time": "22/05/2026, 11:34:15"
+      },
+      {
+        "by": "ENOCH VIVEK PRABHU",
+        "role": "Submitting Officer",
+        "action": "Forwarded by Submitting Officer",
+        "note": "Medical certificate verified and attached. Recommending forward.",
+        "time": "22/05/2026, 11:34:15"
+      }
+    ]
+  }
+]
